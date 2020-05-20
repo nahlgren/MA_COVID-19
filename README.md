@@ -12,5 +12,12 @@ Text from these webpages are manually concatenated together in the file all_Worc
 
 Scripts for plotting of Worcester area COVID-19 data are provided in the the following R scripts:
 Worcester_COVID.R --> plots cumulative case numbers and daily new cases/day
+
+![Cumulative case numbers and new daily cases/day over time for Worcester](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_v2.jpg)
+
+
 Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worcester and surrounding cities
 
+![Cumulative case numbers over time for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_cities_cases.jpg)
+
+![Plot of population density vs. current COVID-19 cases per capita for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_cities_dens_cases.jpg)
