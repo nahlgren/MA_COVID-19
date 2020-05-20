@@ -2,8 +2,8 @@
 ### to plot on a map of cities/towns in MA
 
 library(sf)
+library(RColorBrewer)
 
-setwd("/Users/nathanahlgren/Documents/Clark/Outreach/COVID/Weekly_city")
 
 ###### load in data for the population size and county membership of each city
 city.pop<-read.table(file="MA_city_pops.txt",header=T,row.names=1,sep="\t")
@@ -109,7 +109,51 @@ q.breaks<-quantile(rate.df$Rate.Pop,probs=c(0,0.05,0.25,0.75,0.95,1),na.rm=T)
 
 ####################################
 ### Plot map of the daily new cases/day/100,000 people by city
+## source of .shp file: http://download.massgis.digital.mass.gov/shapefiles/state/townssurvey_shp.zip
+
+ma<-st_read("TOWNSSURVEY_POLY.shp")
+
+## load latest weekly case data
+f<-paste(pre,file.dates[length(file.dates)],suff,sep="")
+COVID.d<-read.table(file=f,sep="\t",header=T)
+#ma.pop<-read.table(file="MA_town_pop_data.txt",sep="\t",header=T)
+ma.pop<-read.table(file="MA_city_pops.txt",sep="\t",header=T)
+
+
+levels(COVID.d$CITY.TOWN) == levels(ma$TOWN)
+levels(ma.pop$MUNICIPALITY) == levels(ma$TOWN)
+
+ma$COVID.RATE=rep(NA,dim(ma)[1])
+ma$POP2010=rep(NA,dim(ma)[1])
+ma$COUNTY=rep(NA,dim(ma)[1])
+
+ma$RATE.LM=rep(NA,dim(ma)[1])
+ma$RATE.LM.POP=rep(NA,dim(ma)[1])
+
+#ma.towns<-levels(COVID.d$City.Town)
+ma.towns<-levels(ma$TOWN)
 
 
 
+for (i in c(1:length(ma.towns))) {
 
+	j<-which(ma$TOWN == ma.towns[i])
+	for (j in which(ma$TOWN == ma.towns[i])) {
+		ma$COUNTY[j]<-as.character(ma.pop$COUNTY[which(ma.pop$MUNICIPALITY ==ma.towns[i])])
+		ma$POP2010[j]<-as.numeric(ma.pop$POPULATION[which(ma.pop$MUNICIPALITY ==ma.towns[i])])
+		ma$COVID.RATE[j]<-COVID.d$RATE[which(COVID.d$CITY.TOWN==ma.towns[i])]
+		ma$RATE.LM[j]<-rate.df$Rate[which(rownames(rate.df)==ma.towns[i])]
+		ma$RATE.LM.POP[j]<-rate.df$Rate.Pop[which(rownames(rate.df)==ma.towns[i])]
+		}
+	}
+
+
+#plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"])
+#plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"],pal=brewer.pal(9,"Reds"))
+
+#plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"],breaks=q.breaks,main="New cases/day estimated from regression last 3 weekly datapoint")
+
+### Plot new cases/day per 100,000 people based on regressions of weekly data for the last n time points (i.e. weeks)
+jpeg(file="MA_city-town_3weekregression_cases_per_day_percapita.jpg",width=1600,height=800)
+plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"],breaks=q.breaks,pal=brewer.pal((length(q.breaks)-1),"Reds"),main="New cases/day estimated from regressions of weekly data, last 3 weeks",key.pos=1,cex.main=2)
+dev.off()
