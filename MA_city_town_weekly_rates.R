@@ -157,3 +157,27 @@ for (i in c(1:length(ma.towns))) {
 jpeg(file="MA_city-town_3weekregression_cases_per_day_percapita.jpg",width=1600,height=800)
 plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"],breaks=q.breaks,pal=brewer.pal((length(q.breaks)-1),"Reds"),main="New cases/day estimated from regressions of weekly data, last 3 weeks",key.pos=1,cex.main=2)
 dev.off()
+
+### plot case data for 5% and 95% quantile cities
+q95.cities<-which(rate.df$Rate.Pop>q.breaks[5])
+q5.cities<-which(rate.df$Rate.Pop>q.breaks[2])
+
+jpeg(file="MA_cities_0.95quant.jpg",width=600,height=600)
+par(mfrow=c(4,4))
+for (i in c(1:length(q95.cities))) {
+	plot(as.Date(colnames(case.m)),case.m[q95.cities[i],]/city.pop.df$POP[q95.cities[i]]*100000,xlab="Date",ylab="Cases per 100,000",main=rownames(case.m)[q95.cities[i]],las=1,bg='black',pch=21)
+}
+dev.off()
+
+jpeg(file="MA_cities_0.05quant.jpg",width=600,height=600)
+q5.cities<-which(rate.df$Rate.Pop<q.breaks[2])
+par(mfrow=c(4,4))
+for (i in c(1:length(q5.cities))) {
+#	plot(as.Date(colnames(case.m)),case.m[q5.cities[i],],xlab="Date",ylab="Cumulative cases",main=rownames(case.m)[q5.cities[i]],cex=3)
+	plot(as.Date(colnames(case.m)),case.m[q5.cities[i],]/city.pop.df$POP[q5.cities[i]]*100000,xlab="Date",ylab="Cases per 100,000",main=rownames(case.m)[q5.cities[i]],las=1,bg='black',pch=21)
+}
+dev.off()
+
+### plot of statewide case data
+i<-353
+plot(as.Date(colnames(case.m)),case.m[i,],xlab="Date",ylab="Cumulative cases",main=rownames(case.m)[i])
