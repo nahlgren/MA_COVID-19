@@ -10,10 +10,11 @@ city.pop<-read.table(file="MA_city_pops.txt",header=T,row.names=1,sep="\t")
 
 ###### load in case and rate data for COVID-19 available from MA DPH
 ## list of dates of the data files
-file.dates<-c("4-14-2020","4-22-2020","4-29-2020","5_06_2020","5_13_2020")
+file.dates<-c("4-14-2020","4-22-2020","4-29-2020","5_06_2020","5_13_2020","5_20_2020")
 ## dates of the data in R Date format
-dates<-c("2020-4-14","2020-4-22","2020-4-29","2020-5-06","2020-5-13")
+dates<-c("2020-4-14","2020-4-22","2020-4-29","2020-5-06","2020-5-13","2020-5-20")
 dates<-as.Date(dates)
+last.date<-dates[length(dates)]
 
 ## prefix and suffix of cases data files
 pre<-"covid-19-city-town-"
@@ -154,8 +155,12 @@ for (i in c(1:length(ma.towns))) {
 #plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"],breaks=q.breaks,main="New cases/day estimated from regression last 3 weekly datapoint")
 
 ### Plot new cases/day per 100,000 people based on regressions of weekly data for the last n time points (i.e. weeks)
-jpeg(file="MA_city-town_3weekregression_cases_per_day_percapita.jpg",width=1600,height=800)
-plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"],breaks=q.breaks,pal=brewer.pal((length(q.breaks)-1),"Reds"),main="New cases/day estimated from regressions of weekly data, last 3 weeks",key.pos=1,cex.main=2)
+jpeg(file="MA_city-town_3weekregression_cases_per_day_percapita_05-20-2020.jpg",width=1600,height=800)
+## reduce the number of shapes plotted
+#plot(ma[which(ma$SHAPE_Area>0.5e7),"RATE.LM.POP"],breaks=q.breaks,pal=brewer.pal((length(q.breaks)-1),"Reds"),main=main=paste("New cases/day estimated from regressions of weekly data, last ",n, " weeks, updated ",last.date,sep=""),key.pos=1,cex.main=2)
+##plot all the shapes
+plot(ma[,"RATE.LM.POP"],breaks=q.breaks,pal=brewer.pal((length(q.breaks)-1),"Reds"),main=paste("New cases/day estimated from regressions of weekly data, last ",n, " weeks, updated ",last.date,sep=""),key.pos=1,cex.main=2)
+
 dev.off()
 
 ### plot case data for 5% and 95% quantile cities
