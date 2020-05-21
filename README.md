@@ -9,7 +9,7 @@ MA_city_COVID_plots.R
 
 Note, preliminary analysis. Plot of new cases/day per 100,000 people based on linear regressions of weekly data for the last 3 time points (i.e. weeks). Breaks in colors are according to 1%, 5%, 25%, 75%, 95%, and 99% quartiles. White cities/towns are locations where case counts are <5 and regressions are not calculated.
 
-![New cases/day estimated from regressions of weekly data, last 3 weeks](https://github.com/nahlgren/MA_COVID-19/blob/master/MA_city-town_3weekregression_cases_per_day_percapita.jpg)
+![New cases/day estimated from regressions of weekly data, last 3 weeks](https://github.com/nahlgren/MA_COVID-19/blob/master/MA_city-town_3weekregression_cases_per_day_percapita_05-20-2020.jpg)
 
 Higher resolution case data is also provided for Worcester and surrounding towns (Grafton, Holden, Lecesiter, Millbury, and Shrewsbury) by scraping data from daily announcement from the city of Worcester, avaiable here: http://www.worcesterma.gov/announcements
 Text from these webpages are manually concatenated together in the file all_Worcester_COVID_announcements.txt and case numbers are parsed with the script parse_city_data.pl into individual, tab-delimited files for each city (file name format: NNNNNNNN_city.tsv). Data for West Boylston are compiled manually from announements posted here: https://www.westboylston-ma.gov/home/news/town-administrator-covid-19-updates
