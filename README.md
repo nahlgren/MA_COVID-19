@@ -22,6 +22,10 @@ Worcester_COVID.R --> plots cumulative case numbers and daily new cases/day
 ![Cumulative case numbers and new daily cases/day over time for Worcester](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_v2.jpg)
 
 
+  
+![Worcester COVID-19 daily new cases and deaths](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_cases_deaths.jpg)
+
+
 Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worcester and surrounding cities
 
 
