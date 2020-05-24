@@ -62,7 +62,17 @@ while ($l = <IN>) {
 #		print $d . "\t" . $death . "\n";
 #		print $l . "\n";
 		$deaths{$d} = $death;
-		}		
+		}
+	
+	if ($l =~m/(\d+) \(increase of \d+ from \w+\) total COVID-related deaths/) {
+		$death = $1;
+#		print $d . "\t" . $death . "\n";
+#		print $l . "\n";
+		$deaths{$d} = $death;
+		}
+
+	
+	
 
 	
 	} # end while

@@ -1,4 +1,3 @@
-setwd("/Users/nathanahlgren/Documents/Clark/Outreach/COVID/")
 library(ggplot2)
 library(grid)
 library(gridExtra)
@@ -14,8 +13,14 @@ city.dens<-city.pop/city.area
 city.pop.text<-paste(cities,", pop.: ",formatC(city.pop, format="f", big.mark=",", digits=0),sep="")
 pch.no<-21
 
+## read in Worceter file to pull colnames
+i<-1
+f<-paste(cities[i],"_city.tsv",sep="")
+d<-read.table(file=f,sep="\t",header=T)
+
+
 d.latest<-matrix(NA,nrow=length(cities),ncol=5)
-colnames(d.latest)<-colnames(d)
+#colnames(d.latest)<-colnames(d)
 rownames(d.latest)<-cities
 
 ### generate plot for cumulative case #s over time Worcester and surrounding city plots
