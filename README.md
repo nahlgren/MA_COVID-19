@@ -21,9 +21,17 @@ Worcester_COVID.R --> plots cumulative case numbers and daily new cases/day
 
 ![Cumulative case numbers and new daily cases/day over time for Worcester](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_v2.jpg)
 
+Yellow points represent Sundays.
+
+
+![Worcester COVID-19 daily new cases and hospitalizations](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_7daymean_cases_hospitalizations.jpg)
+
+Seven day means for COVID-19 daily new cases and COVID-19 positive hospitalizations (all combined medical facilities of Saint Vincent Hospital and UMass Memorial Health) in Worcester, MA. Yellow points represent Sundays.
 
   
 ![Worcester COVID-19 daily new cases and deaths](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_cases_deaths.jpg)
+
+COVID-19 daily new cases and daily new COVID-19 related deaths in all combined medical facilities of Saint Vincent Hospital and UMass Memorial Health) in Worcester, MA. Yellow points represent Sundays.
 
 
 Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worcester and surrounding cities
