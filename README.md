@@ -24,12 +24,12 @@ Worcester_COVID.R --> plots cumulative case numbers and daily new cases/day
 Yellow points represent Sundays.
 
 
-![Worcester COVID-19 daily new cases and hospitalizations](https://github.com/nahlgren/MA_COVID-19/Worcester_COVID_7daymean_cases_hospitalizations.jpg)
+![Worcester COVID-19 daily new cases and hospitalizations](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_7daymean_cases_hospitalizations.jpg)
 
 Seven day means for COVID-19 daily new cases and COVID-19 positive hospitalizations (all combined medical facilities of Saint Vincent Hospital and UMass Memorial Health) in Worcester, MA. Yellow points represent Sundays.
 
   
-![Worcester COVID-19 daily new cases and deaths](https://github.com/nahlgren/MA_COVID-19/Worcester_COVID_cases_deaths.jpg)
+![Worcester COVID-19 daily new cases and deaths](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_cases_deaths.jpg)
 
 COVID-19 daily new cases and daily new COVID-19 related deaths in all combined medical facilities of Saint Vincent Hospital and UMass Memorial Health) in Worcester, MA. Yellow points represent Sundays.
 
@@ -37,6 +37,6 @@ COVID-19 daily new cases and daily new COVID-19 related deaths in all combined m
 Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worcester and surrounding cities
 
 
-![Cumulative case numbers over time for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/Worcester_cities_cases.jpg)
+![Cumulative case numbers over time for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_cities_cases.jpg)
 
-![Plot of population density vs. current COVID-19 cases per capita for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/Worcester_cities_dens_cases.jpg)
+![Plot of population density vs. current COVID-19 cases per capita for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_cities_dens_cases.jpg)
