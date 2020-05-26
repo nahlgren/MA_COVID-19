@@ -40,3 +40,21 @@ Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worces
 ![Cumulative case numbers over time for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_cities_cases.jpg)
 
 ![Plot of population density vs. current COVID-19 cases per capita for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_cities_dens_cases.jpg)
+
+Worcester county appears to be lagging in the timing and strength of decline in new daily COVID-19 cases and deaths compared to other counties.
+
+![Worcester county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_county_vs_MA.jpg)
+
+![Suffolk county daily new COVID-19 cases, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/Suffolk_county_vs_MA.jpg)
+
+![Middlesex county daily new COVID-19 cases, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/Middlesex_county_vs_MA.jpg)
+
+
+The same trend apears to occur for COVID-19 related deaths for Worcester county
+
+![Worcester county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_county_vs_MA_deaths.jpg)
+
+![Suffolk county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/Suffolk_county_vs_MA_deaths.jpg)
+
+
+
