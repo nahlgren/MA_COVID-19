@@ -34,6 +34,10 @@ Seven day means for COVID-19 daily new cases and COVID-19 positive hospitalizati
 COVID-19 daily new cases and daily new COVID-19 related deaths in all combined medical facilities of Saint Vincent Hospital and UMass Memorial Health) in Worcester, MA. Yellow points represent Sundays.
 
 
+![Worcester and MA COVID-19 daily new cases](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_MA_daily_new_cases.jpg)
+Yet another plot showing daily new cases normalized to population.
+
+
 Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worcester and surrounding cities
 
 
@@ -41,7 +45,7 @@ Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worces
 
 ![Plot of population density vs. current COVID-19 cases per capita for Worcester and surrounding cities](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_cities_dens_cases.jpg)
 
-Worcester county appears to be lagging in the timing and strength of decline in new daily COVID-19 cases and deaths compared to other counties.
+Worcester county appears to be lagging in the timing and strength of decline in new daily COVID-19 cases and deaths compared to other counties and the state as a whole.
 
 ![Worcester county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_county_vs_MA.jpg)
 
