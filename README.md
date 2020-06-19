@@ -43,18 +43,18 @@ Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worces
 
 Worcester county was lagging initially the timing and strength of decline in new daily COVID-19 cases and deaths compared to other counties and the state as a whole, but in the last few weeks has dropped down to levels similar to other counties.
 
-![Worcester county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County/Worcester_county_vs_MA_popnorm.jpg)
+![Worcester county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County_plots/Worcester_county_vs_MA_popnorm.jpg)
 
-![Suffolk county daily new COVID-19 cases, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County/Suffolk_county_vs_MA_popnorm.jpg)
+![Suffolk county daily new COVID-19 cases, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County_plots/Suffolk_county_vs_MA_popnorm.jpg)
 
-![Middlesex county daily new COVID-19 cases, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County/Middlesex_county_vs_MA_popnorm.jpg)
+![Middlesex county daily new COVID-19 cases, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County_plots/Middlesex_county_vs_MA_popnorm.jpg)
 
 
 The same initial lag in decline also occurs for COVID-19 related deaths for Worcester county (needs to be updated).
 
-![Worcester county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County/Worcester_county_vs_MA_deaths.jpg)
+![Worcester county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County_plots/Worcester_county_vs_MA_deaths.jpg)
 
-![Suffolk county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County/Suffolk_county_vs_MA_deaths.jpg)
+![Suffolk county daily new COVID-19 cases and deaths, 7 day average](https://github.com/nahlgren/MA_COVID-19/blob/master/County_plots/Suffolk_county_vs_MA_deaths.jpg)
 
 
 Note, preliminary analysis. Plot of new cases/day per 100,000 people based on linear regressions of weekly data for the last 3 time points (i.e. weeks). Breaks in colors are according to 1%, 5%, 25%, 75%, 95%, and 99% quartiles. White cities/towns are locations where case counts are <5 and regressions are not calculated.
