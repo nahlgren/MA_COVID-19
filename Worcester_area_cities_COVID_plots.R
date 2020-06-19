@@ -33,7 +33,11 @@ for (i in c(1:length(cities))) {
 	d<-read.table(file=f,sep="\t",header=T)
 	
 	# process dates
-	d$Date<-as.Date(d$Date)
+	if (i == 1) {
+		d$Date<-as.Date(d$Date)
+		} else {
+		d$Date<-as.Date(d$Date)	
+		}
 	d$cases<-as.numeric(d$cases)
 	d$cases.pop<-d$cases/city.pop[i]*1000
 	
