@@ -14,6 +14,11 @@ Scripts for plotting of Worcester area COVID-19 data are provided in the the fol
 
 Worcester_COVID.R --> plots cumulative case numbers and daily new cases/day
 
+![Worcester and MA COVID-19 daily new cases](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_MA_daily_new_cases.jpg)
+
+Plot showing daily new cases normalized to population for the city of Worcester. Note that the jump in the number of cases at the begining of June is not 'real' spike in cases, but an anomaly in how cases were reported and parsed.
+
+
 ![Cumulative case numbers and new daily cases/day over time for Worcester](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_v2.jpg)
 
 Yellow points represent Sundays.
@@ -27,10 +32,6 @@ Seven day means for COVID-19 daily new cases and COVID-19 positive hospitalizati
 ![Worcester COVID-19 daily new cases and deaths](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_COVID_cases_deaths.jpg)
 
 COVID-19 daily new cases and daily new COVID-19 related deaths in all combined medical facilities of Saint Vincent Hospital and UMass Memorial Health) in Worcester, MA. Yellow points represent Sundays.
-
-
-![Worcester and MA COVID-19 daily new cases](https://github.com/nahlgren/MA_COVID-19/blob/master/Worcester_MA_daily_new_cases.jpg)
-Yet another plot showing daily new cases normalized to population.
 
 
 Worcester_area_cities_COVID_plots.R --> plots cumulative case numbers for Worcester and surrounding cities
