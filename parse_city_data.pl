@@ -19,6 +19,8 @@ my %millbury;
 my $out;
 my %deaths;
 my $death;
+my $h;
+my %hosp;
 
 open (IN,$in) or die "Couldn't open infile $in:$!\n";
 
@@ -71,8 +73,22 @@ while ($l = <IN>) {
 		$deaths{$d} = $death;
 		}
 
-	
-	
+##example text: 284 total COVID-positive in-patients	
+
+	if ($l =~m/(\d+) total COVID-positive in-patients/) {
+		$h = $1;
+#		print $d . "\t" . $death . "\n";
+#		print $l . "\n";
+		$hosp{$d} = $h;
+		}
+## example text: 200 (decrease of 10 from Friday) total COVID-positive in-patients
+
+	if ($l =~m/(\d+) \(\w+crease of \d+ from \w+\) total COVID-positive in-patients/) {
+		$h = $1;
+#		print $d . "\t" . $death . "\n";
+#		print $l . "\n";
+		$hosp{$d} = $h;
+		}	
 
 	
 	} # end while
@@ -124,5 +140,13 @@ open(OUT,">$out");
 print OUT "Date\tDeaths\n";
 foreach $d (sort keys %deaths) {
 	print OUT "$d\t$deaths{$d}\n";
+	}
+close OUT;
+
+$out = "Worcester_hospitalizations.tsv";
+open(OUT,">$out");
+print OUT "Date\tHospitalizations\n";
+foreach $d (sort keys %hosp) {
+	print OUT "$d\t$hosp{$d}\n";
 	}
 close OUT;
