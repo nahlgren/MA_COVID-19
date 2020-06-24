@@ -7,7 +7,7 @@ library(RColorBrewer)
 
 
 ###### load in data for the population size and county membership of each city
-city.pop<-read.table(file="MA_city_pops.txt",header=T,row.names=1,sep="\t")
+city.pop<-read.table(file="Weekly_Data/MA_city_pops.txt",header=T,row.names=1,sep="\t")
 
 ###### load in case and rate data for COVID-19 available from MA DPH
 ## list of dates of the data files
@@ -19,7 +19,7 @@ dates<-as.Date(dates)
 last.date<-dates[length(dates)]
 
 ## prefix and suffix of cases data files
-pre<-"covid-19-city-town-"
+pre<-"Weekly_data/covid-19-city-town-"
 suff<-".txt"
 f<-paste(pre,file.dates[1],suff,sep="")
 d<-read.table(file=f,header=T,row.names=1,sep="\t")
@@ -177,13 +177,13 @@ high.i<-intersect(which(rate.m.sort.gt50cases[,1]>=20),which(rate.m.sort.gt50cas
 ### Plot map of the daily new cases/day/100,000 people by city
 ## source of .shp file: http://download.massgis.digital.mass.gov/shapefiles/state/townssurvey_shp.zip
 
-ma<-st_read("TOWNSSURVEY_POLY.shp")
+ma<-st_read("Weekly_data/TOWNSSURVEY_POLY.shp")
 
 ## load latest weekly case data
 f<-paste(pre,file.dates[length(file.dates)],suff,sep="")
 COVID.d<-read.table(file=f,sep="\t",header=T)
 #ma.pop<-read.table(file="MA_town_pop_data.txt",sep="\t",header=T)
-ma.pop<-read.table(file="MA_city_pops.txt",sep="\t",header=T)
+ma.pop<-read.table(file="Weekly_data/MA_city_pops.txt",sep="\t",header=T)
 
 
 levels(COVID.d$CITY.TOWN) == levels(ma$TOWN)
